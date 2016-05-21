@@ -6,14 +6,24 @@ import XCPlayground
 
 //: To prevent the playground from killing background tasks when the main thread has completed, need to specify indefinite execution
 
-
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 //: ## Creating a queue
 //: Operations can be added to queues directly as closures
+let printerQueue = NSOperationQueue()
+printerQueue.maxConcurrentOperationCount = 2
 
+startClock()
+printerQueue.addOperationWithBlock({sleep(5); print("Hello")})
+printerQueue.addOperationWithBlock({sleep(5); print("my")})
+printerQueue.addOperationWithBlock({sleep(5); print("name")})
+printerQueue.addOperationWithBlock({sleep(5); print("is")})
+printerQueue.addOperationWithBlock({sleep(5); print("Alex")})
+stopClock()
 
-
-
+startClock()
+printerQueue.waitUntilAllOperationsAreFinished()
+stopClock()
 
 
 
@@ -22,15 +32,21 @@ let images = ["city", "dark_road", "train_day", "train_dusk", "train_night"].map
 var filteredImages = [UIImage]()
 
 //: Create the queue with the default constructor
-
+let filterQueue = NSOperationQueue()
 
 //: Create a filter operations for each of the iamges, adding a completionBlock
 for image in images {
-
+    let filterOp = TiltShiftOperation()
+    filterOp.inputImage = image
+    filterOp.completionBlock = {
+        guard let output = filterOp.outputImage else { return }
+        filteredImages.append(output)
+    }
+    filterQueue.addOperation(filterOp)
 }
 
 //: Need to wait for the queue to finish before checking the results
-
+filterQueue.waitUntilAllOperationsAreFinished()
 
 //: Inspect the filtered images
 filteredImages

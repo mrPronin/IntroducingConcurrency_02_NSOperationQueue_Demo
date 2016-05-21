@@ -3,7 +3,7 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=216&amp;EndingColumnNumber=17&amp;EndingLineNumber=20&amp;StartingColumnNumber=1&amp;StartingLineNumber=20&amp;Timestamp=470804873.336488"
+         documentLocation = "#CharacterRangeLen=0&amp;CharacterRangeLoc=216&amp;EndingColumnNumber=17&amp;EndingLineNumber=30&amp;StartingColumnNumber=1&amp;StartingLineNumber=30&amp;Timestamp=485523635.377455"
          lockedSize = "{421, 471}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
@@ -15,7 +15,7 @@
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "#CharacterRangeLen=14&amp;CharacterRangeLoc=844&amp;EndingColumnNumber=15&amp;EndingLineNumber=35&amp;StartingColumnNumber=1&amp;StartingLineNumber=35&amp;Timestamp=470804873.336861"
+         documentLocation = "#CharacterRangeLen=14&amp;CharacterRangeLoc=1725&amp;EndingColumnNumber=15&amp;EndingLineNumber=51&amp;StartingColumnNumber=1&amp;StartingLineNumber=51&amp;Timestamp=485524478.446948"
          lockedSize = "{242, 352}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
